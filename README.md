@@ -1,0 +1,2 @@
+# Midisualizer
+mid controlled visualizations
