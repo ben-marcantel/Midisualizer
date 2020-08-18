@@ -1,0 +1,127 @@
+:root {
+
+  --main-padding: 1em;
+  --main-margin: 1em;
+  --main-border-radius: 1em;
+
+  /*font*/
+  --main-font-color: white;
+  --main-font-size: 2em;
+
+  /*buttons*/
+  --button-font-size: .75em;
+  --button-border: 1px solid white;
+  --button-hover-bg:  rgba(255, 255, 255, 0.788);
+
+}
+
+/*chrome hack*/
+*:focus {
+  outline: none;
+}
+
+body {
+  color: var(--main-font-color);
+  font-size: var(--main-font-size);
+
+  background: linear-gradient(130deg, #000000, #040131, #290238);
+  background-size: 200% 200%;
+  -webkit-animation: bgUndulator 10s ease infinite;
+  -moz-animation: bgUndulator 10s ease infinite;
+  animation: bgUndulator 10s ease infinite;
+
+}
+
+.centerWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  background-color: transparent;
+  color: var(--main-font-color);
+  border-radius: var(--main-border-radius);
+  padding: var(--main-padding);
+  border: var(--button-border);
+  font-size: var(--button-font-size);
+  margin: var(--main-margin);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+button:hover {
+  background-color: var(--button-hover-bg);
+  color: black;
+  border-radius: var(--main-border-radius);
+  padding: var(--main-padding);
+  border: var(--button-border);
+  font-size: var(--button-font-size);
+  margin: var(--main-margin);
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.scroller {
+  animation-timing-function: linear;
+  animation-duration: 25s;
+  animation-name: textScroll;
+  animation-iteration-count: infinite;
+}
+
+/**Animations**/
+
+/*text scroll*/
+@keyframes textScroll {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: -40%;
+    width: -300%;
+  }
+}
+
+/*Main Background */
+@-webkit-keyframes bgUndulator {
+  0% {
+    background-position: 10% 0%;
+  }
+
+  50% {
+    background-position: 91% 100%;
+  }
+
+  100% {
+    background-position: 10% 0%;
+  }
+}
+
+@-moz-keyframes bgUndulator {
+  0% {
+    background-position: 10% 0%
+  }
+
+  50% {
+    background-position: 91% 100%
+  }
+
+  100% {
+    background-position: 10% 0%
+  }
+}
+
+@keyframes bgUndulator {
+  0% {
+    background-position: 10% 0%;
+  }
+
+  50% {
+    background-position: 91% 100%;
+  }
+
+  100% {
+    background-position: 10% 0%;
+  }
+}
