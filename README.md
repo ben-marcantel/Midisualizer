@@ -1,2 +1,2 @@
 # Midisualizer
-mid controlled visualizations
+midi controlled visualizations, run in chrome.  
